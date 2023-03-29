@@ -26,4 +26,19 @@ def exportar_planilha():
         writer = csv.writer(file)
         writer.writerow(header)
         writer.writerows(atividades)
-    print('Planilha exportada')
+    print('Planilha exportada com sucesso!')
+
+# loop principal do programa
+while True:
+    print('\n*** Sistema de Controle de Horas de Trabalho ***\n')
+    print('Escolha uma opção:')
+    print('1 - Iniciar cronômetro')
+    print('2 - Exportar planilha de horas trabalhadas')
+    print('3 - Sair')
+    opcao = input('Opção: ')
+    if opcao == '1':
+        iniciar_cronometro()
+    elif opcao == '2':
+        exportar_planilha()
+    elif opcao == '3':
+        print('Concluido)')
